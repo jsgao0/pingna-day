@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .desktop {
+      display: block;
+    }
+
+    .mobile {
+      display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <img class="desktop" src="./pingna-day.png" alt="Pingna Day website will be launched soon.">
+  <img class="mobile" src="./pingna-day-mobile.png" alt="Pingna Day website will be launched soon.">
+</body>
+</html>
