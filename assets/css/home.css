@@ -1,0 +1,12 @@
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+.flex > .flex-1 {
+  flex-grow: 1;
+}
+
+.max-width-full {
+  max-width: 100%;
+}

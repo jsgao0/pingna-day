@@ -1,0 +1,76 @@
+/* Base styles (applied to all screen sizes) */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', 'Noto Sans TC', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.anchor-offset {
+  padding-top: 129px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* Mobile styles (default for smaller screens) */
+header {
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+nav > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+@media (max-width: 1200px) {
+  .flex-wrap-m {
+    flex-wrap: wrap;
+  }
+
+  .flex-basis-full-m {
+    flex-basis: 100%;
+  }
+
+  .flex-reverse-m {
+    flex-direction: column-reverse;
+  }
+}
+
+/* Desktop styles (applied for larger screens) */
+@media (min-width: 1200px) {
+  header {
+    text-align: left;
+  }
+
+  nav > ul {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    padding: 10px 15px;
+  }
+  .anchor-offset {
+    padding-top: 77px;
+  }
+}
