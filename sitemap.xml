@@ -2,49 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.pingna-day.com/</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/index_zh.html</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/catalog/rfc_index.html</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/catalog/rfc_index_zh.html</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/catalog/rfc_en_pouchong.html</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/catalog/rfc_en_orange.html</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/catalog/rfc_zh_pouchong.html</loc>
-    <lastmod>2025-08-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.pingna-day.com/catalog/rfc_zh_orange.html</loc>
-    <lastmod>2025-08-12</lastmod>
+    <lastmod>2025-11-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
