@@ -1,9 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English page -->
   <url>
-    <loc>https://www.pingna-day.com/</loc>
-    <lastmod>2025-11-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://www.pingna-day.com/en/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pingna-day.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.pingna-day.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pingna-day.com/"/>
+    <lastmod>2025-11-04</lastmod>
+    <priority>1.0</priority>
   </url>
+
+  <!-- Chinese page -->
+  <url>
+    <loc>https://www.pingna-day.com/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.pingna-day.com/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.pingna-day.com/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.pingna-day.com/"/>
+    <lastmod>2025-11-04</lastmod>
+    <priority>1.0</priority>
+  </url>
+
 </urlset>
