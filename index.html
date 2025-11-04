@@ -65,8 +65,7 @@
         const saved = localStorage.getItem('lang');
         const nav = (navigator.language || '').toLowerCase();
         const lang = saved || (nav.startsWith('zh') ? 'zh' : 'en');
-        if (lang !== 'zh')
-          setTimeout(() => location.replace('/' + lang + '/'), 1000);
+        setTimeout(() => location.replace('/' + lang + '/'), 1000);
       });
     </script>
   </head>
