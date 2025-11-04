@@ -61,8 +61,7 @@
       content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation."
     />
     <script>
-      // 延遲導向 1 秒，保留 crawler 能抓到 meta 的時間
-      window.addEventListener('DOMContentLoaded', () => {
+      window.addEventListener('load', () => {
         const saved = localStorage.getItem('lang');
         const nav = (navigator.language || '').toLowerCase();
         const lang = saved || (nav.startsWith('zh') ? 'zh' : 'en');
