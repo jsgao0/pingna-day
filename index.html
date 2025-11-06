@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel="alternate" hreflang="en" href="https://www.pingna-day.com/en/" />
     <link
       rel="alternate"
@@ -14,7 +15,7 @@
       hreflang="x-default"
       href="https://www.pingna-day.com/"
     />
-    <link rel="canonical" href="https://www.pingna-day.com/en/" />
+    <link rel="canonical" href="https://www.pingna-day.com/zh/" />
 
     <link
       rel="icon"
@@ -23,14 +24,14 @@
       href="https://www.pingna-day.com/assets/images/favicon.png"
     />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale" content="zh_Hant" />
     <meta
       property="og:title"
-      content="Pingna Day Sparkling Tea | Introducing Paochong Tea to the world."
+      content="坪常日包種氣泡茶｜讓全世界都認識包種茶"
     />
     <meta
       property="og:description"
-      content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation."
+      content="坪常日｜包種氣泡茶與橘香氣泡茶：堅持傳統，持續創新。"
     />
     <meta property="og:url" content="https://www.pingna-day.com/en/" />
     <meta
@@ -42,36 +43,289 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="Pingna Day Sparkling Tea | Introducing Paochong Tea to the world."
+      content="坪常日包種氣泡茶｜讓全世界都認識包種茶"
     />
     <meta
       name="twitter:description"
-      content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation."
+      content="坪常日｜包種氣泡茶與橘香氣泡茶：堅持傳統，持續創新。"
     />
     <meta
       name="twitter:image"
       content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png"
     />
 
-    <title>
-      Pingna Day Sparkling Tea | Introducing Paochong Tea to the world.
-    </title>
+    <title>坪常日包種氣泡茶｜讓全世界都認識包種茶</title>
     <meta
-      name="description"
-      content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation."
+      name="twitter:description"
+      content="坪常日｜包種氣泡茶與橘香氣泡茶：堅持傳統，持續創新。"
     />
-    <script>
-      window.addEventListener('load', () => {
-        const saved = localStorage.getItem('lang');
-        const nav = (navigator.language || '').toLowerCase();
-        const lang = saved || (nav.startsWith('zh') ? 'zh' : 'en');
-        setTimeout(() => location.replace('/' + lang + '/'), 1000);
-      });
-    </script>
+    <link rel="stylesheet" href="../assets/css/normalization.css" />
+    <link rel="stylesheet" href="../assets/css/responsive.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
   </head>
-  <body>
-    <h1>坪常日 Pingna Day</h1>
-    <p>正在自動導向到您的語言版本…</p>
-    <p><a href="/zh/">繁體中文</a> | <a href="/en/">English</a></p>
+  <body id="story">
+    <header>
+      <nav
+        class="container align-center"
+        style="display: flex; justify-content: space-between"
+      >
+        <div class="logo">
+          <img
+            src="../assets/images/pingna_day_logo.png"
+            alt="Pingna Day Logo"
+          />
+        </div>
+        <ul>
+          <li><a href="#story">坪常日的故事</a></li>
+          <li><a href="#products">坪常日的產品</a></li>
+          <li><a href="#contact">聯絡我們</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <img
+        src="../assets/images/pingna_day_home_1.jpg"
+        alt="Pinglin Tea Farm"
+        style="max-width: 100%"
+      />
+      <section class="container">
+        <h2>新北坪林 – 最香的製茶手藝</h2>
+        <p>
+          兩百多年前，一群來自福建安溪的茶農及製茶師傅來到了大文山、落腳在坪林。傳承自祖輩的製茶技術，加上坪林得天獨厚的氣候與地理環境，讓這裡的「好茶」名揚四海。
+        </p>
+        <p>
+          而注重香氣的文山包種茶，更是在臺北水源特定區的法令限制下，
+          持續以符合法規的耕作方式，讓茶產業與環境能夠穩定發展。而坪林作為臺北-宜蘭的中繼站，現今亦成為了大文山中最後的茶鄉。
+        </p>
+        <h2>有了風土 – 才是坪常日</h2>
+        <p>
+          散村聚落的坪林，家庭即是製茶廠，大多茶農也是茶師，為了讓製茶手藝持續精進，針對茶園管理、製茶流程更是需要相互交流，才能製出一杯好茶提供給消費者品評。
+        </p>
+        <p>
+          「堅持傳統、持續創新」，結合在地的茶產業，不只是推廣坪林的生活，而是將坪林的在地風土帶給大家，來坪林走走，帶給大家的是我們所期待的「坪常日」。
+        </p>
+      </section>
+
+      <section id="products" class="container anchor-offset">
+        <h2>坪常日的產品</h2>
+        <div class="product">
+          <div class="flex flex-gap-20 flex-wrap-m flex-reverse-m">
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <img
+                class="max-width-full"
+                src="../assets/images/paochong_tea_bag.jpg"
+                alt="坪林文山包種茶"
+              />
+            </div>
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <h3>坪林文山包種茶</h3>
+              <p>
+                坪林的包種茶，一年採收以春、冬兩李為主。從採摘茶菁、日光萎潤、室內萎潤、攪拌、炒青、揉捻、乾燦等，需耗費將近24小時的製程。
+              </p>
+              <p>
+                包種茶外觀呈墨綠條索狀、香氣高雅似花香、滋味甘醇鮮活，水色呈蜜綠顯黃。其中以茉莉花、蘭花、梔子花等白色花香皆是常見的類型。
+              </p>
+              <p class="flex flex-gap-20 align-center">
+                購買通路：
+                <a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwMg%3D%3D"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_wonderfulfood.png"
+                    alt=""
+                    height="32"
+                    style="padding: 4px;"
+                /><span>台灣好農</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="flex flex-gap-20 flex-wrap-m">
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <h3>坪林蜜香紅茶(香韻紅茶)</h3>
+              <p>
+                坪林春夏之交、小綠葉蟬著蜒後，天然香氣的茶菁瀰漫在茶園間。結合包種茶技藝與紅茶的製程，攪拌與發酵的雙重作用，讓花、果蜜同時存在於茶湯中。
+              </p>
+              <p>
+                時不時帶著黃金白毫是外觀鮮明印記、蜜甜香氣馥郁在亮紅色的茶湯之中，直覺鮮明且甜入心頭。
+              </p>
+              <p class="flex flex-gap-20 align-center">
+                購買通路：
+                <a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwMw%3D%3D"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_wonderfulfood.png"
+                    alt=""
+                    height="32"
+                    style="padding: 4px;"
+                /><span>台灣好農</span></a>
+              </p>
+            </div>
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <img
+                class="max-width-full"
+                src="../assets/images/honey_black_tea_bag.jpg"
+                alt="坪林蜜香紅茶(香韻紅茶)"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="flex flex-gap-20 flex-wrap-m flex-reverse-m">
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <img
+                class="max-width-full"
+                src="../assets/images/sparkling_paochong_tea.png"
+                alt="包種氣泡茶"
+              />
+            </div>
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <h3>包種氣泡茶</h3>
+              <p>
+                文山包種茶以輕發酵、無薰花式製程聞名，透過茶師細心製作，帶有花香、水色蜜綠顯黃正是包種茶特色。
+              </p>
+              <p>
+                為推廣讓更多人嘗試茶飲，我們選擇將文山包種茶與氣泡水結合，推出坪常日的「包種氣泡茶」，創新口感、獨特風味，一樣的花香與蜜綠黃搭配綿密的氣泡感，無論日常、派對，無糖、無酒精的包種氣泡茶絕對是您最佳的飲品選擇。
+              </p>
+              <p class="flex flex-gap-20 align-center">
+                購買通路：<a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14618305"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_momo_logo.svg"
+                    alt=""
+                    height="40"
+                /><span>momo購物網</span></a>
+                <a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwNA%3D%3D"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_wonderfulfood.png"
+                    alt=""
+                    height="32"
+                    style="padding: 4px;"
+                /><span>台灣好農</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="flex flex-gap-20 flex-wrap-m">
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <h3>橘香氣泡茶</h3>
+              <p>
+                坪常日推出包種氣泡茶後，為滿足「無糖不歡」以及味覺對氣泡弱酸性較為敏銳的消費族群有其他選項，結合了新北坪林在地早年種植柑橘的產業脈絡，推出「橘香氣泡茶」。
+              </p>
+              <p>
+                透過柑橘自帶酸甜增加茶飲的甜度以及與氣泡弱酸性的結合，讓飲品的層次感提升。兼顧在地性與消費需求，讓品嘗氣泡茶的您猶如置身坪林宇宙中享受在地的繽紛。
+              </p>
+              <p class="flex flex-gap-20 align-center">
+                購買通路：<a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14618304"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_momo_logo.svg"
+                    alt=""
+                    height="40"
+                /><span>momo購物網</span></a>
+                <a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwNQ%3D%3D"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_wonderfulfood.png"
+                    alt=""
+                    height="32"
+                    style="padding: 4px;"
+                /><span>台灣好農</span></a>
+              </p>
+            </div>
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <img
+                class="max-width-full"
+                src="../assets/images/sparkling_orange_scented_tea.png"
+                alt="橘香氣泡茶"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="product">
+          <div class="flex flex-gap-20 flex-wrap-m flex-reverse-m">
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <img
+                class="max-width-full"
+                src="../assets/images/paochong_tea_candy.png"
+                alt="坪林文山包種茶糖"
+                style="max-height: 600px"
+              />
+            </div>
+            <div class="flex-1 flex-basis-full-m flex-basis-half-l">
+              <h3>坪林文山包種茶糖</h3>
+              <p>
+                以新北市坪林盛產的文山包種茶為基底，以研磨茶粉搭配天然蔗糖結合而成。包種茶清香雅致、帶有花果香，融入糖中後，不僅保留茶韻，更增添入口即化的甘潤滋味。
+              </p>
+              <p>
+                此茶糖兼具茶香與甜味，口感清爽不膩，既能隨身享用，也適合作為伴手禮，展現坪林獨有的茶鄉風味與文化底蘊。
+              </p>
+              <p class="flex flex-gap-20 align-center">
+                購買通路：
+                <a
+                  class="flex align-center flex-gap-10"
+                  href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwOA%3D%3D"
+                  target="_blank"
+                  noopener
+                  noreferrer
+                  ><img
+                    src="../assets/icons/ecommerce_channel_wonderfulfood.png"
+                    alt=""
+                    height="32"
+                    style="padding: 4px;"
+                /><span>台灣好農</span></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container">
+        <h1>聯絡我們</h1>
+        <p>
+          想要問任何問題，歡迎聯繫我們！透過電子郵件與我們聯絡：
+          <a href="mailto:hello@pingna-day.com">hello@pingna-day.com</a>.
+        </p>
+      </section>
+    </main>
+
+    <img
+      src="../assets/images/pingna_day_home_2.jpg"
+      alt="Pinglin Tea Farm"
+      style="max-width: 100%"
+    />
+    <footer class="container">
+      <div>
+        
+      </div>
+      <p class="center">&copy; 2025 坪常日。 版權所有。</p>
+    </footer>
   </body>
 </html>
