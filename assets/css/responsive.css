@@ -1,81 +1,185 @@
-/* Base styles (applied to all screen sizes) */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Noto+Sans+TC:wght@400;700&display=swap');
+/* Responsive Layout — Pingna Day */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap');
 
 body {
-  font-family: 'Roboto', 'Noto Sans TC', Arial, sans-serif;
+  font-family: 'Inter', 'Noto Sans TC', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background: var(--color-cream, #faf8f4);
+  color: var(--color-text, #1a2a2a);
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+/* === Mobile First (< 768px) === */
 
-.anchor-offset {
-  padding-top: 129px;
-}
-
-.center {
-  text-align: center;
-}
-
-/* Mobile styles (default for smaller screens) */
-header {
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-  text-align: center;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-}
-
-nav > ul {
+.nav-toggle {
   display: flex;
+  z-index: 1001;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-links {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
   flex-direction: column;
-  gap: 10px;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 16px 24px;
+  gap: 4px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #333;
+.nav-links.open {
+  display: flex;
 }
 
-@media (max-width: 1200px) {
-  .flex-wrap-m {
-    flex-wrap: wrap;
-  }
-
-  .flex-basis-full-m {
-    flex-basis: 100%;
-  }
-
-  .flex-reverse-m {
-    flex-direction: column-reverse;
-  }
+.nav-links a {
+  padding: 12px 16px;
+  font-size: 1rem;
 }
 
-/* Desktop styles (applied for larger screens) */
-@media (min-width: 1200px) {
-  header {
-    text-align: left;
+.hero {
+  padding: 100px 20px 50px;
+  min-height: 100svh;
+}
+
+.hero-products {
+  gap: 0;
+}
+
+.hero-can {
+  max-height: 200px;
+  margin: 0 -15px;
+}
+
+.sparkling-grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.sparkling-card-image {
+  padding: 28px 20px 16px;
+}
+
+.sparkling-card-image img {
+  max-height: 240px;
+}
+
+.sparkling-card-content {
+  padding: 20px 24px 28px;
+}
+
+.story-grid {
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.story-image {
+  height: 280px;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border-radius: 0;
+}
+
+.products-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.section-header {
+  margin-bottom: 40px;
+}
+
+.contact-section {
+  padding: 60px 20px;
+}
+
+/* === Tablet (768px+) === */
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    background: none;
+    backdrop-filter: none;
     padding: 0;
   }
 
-  .flex-basis-half-l {
-    flex-basis: 50%;
+  .hero-products {
+    gap: 32px;
   }
 
-  nav > ul {
-    flex-direction: row;
-    justify-content: flex-end;
+  .hero-can {
+    max-height: 280px;
+    margin: 0;
   }
 
-  nav a {
-    padding: 10px 15px;
+  .sparkling-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
   }
-  .anchor-offset {
-    padding-top: 77px;
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+
+  .story-image {
+    max-height: none;
+    width: 100%;
+    position: static;
+    transform: none;
+    margin: 0;
+    border-radius: var(--radius-lg);
+  }
+}
+
+/* === Desktop (1024px+) === */
+@media (min-width: 1024px) {
+  .hero-can {
+    max-height: 340px;
+  }
+
+  .story-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .sparkling-card-image img {
+    max-height: 320px;
+  }
+}
+
+/* === Large Desktop (1400px+) === */
+@media (min-width: 1400px) {
+  .hero-can {
+    max-height: 380px;
+  }
+
+  .sparkling-grid {
+    gap: 48px;
   }
 }

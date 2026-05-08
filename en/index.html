@@ -4,6 +4,17 @@
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-36C73MZM6G"></script>
+
+  <!-- Lightbox DOM -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <button id="lightboxPrev" class="lightbox-btn lightbox-prev">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Gallery Image" />
+    </div>
+    <button id="lightboxNext" class="lightbox-btn lightbox-next">&#10095;</button>
+  </div>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -15,6 +26,7 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="alternate" hreflang="en" href="https://www.pingna-day.com/en/" />
   <link rel="alternate" hreflang="zh-Hant" href="https://www.pingna-day.com/zh/" />
   <link rel="alternate" hreflang="x-default" href="https://www.pingna-day.com/" />
@@ -23,7 +35,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://www.pingna-day.com/assets/images/favicon.png" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Pingna Day Sparkling Tea | Introducing Paochong Tea to the world." />
+  <meta property="og:title" content="Pingna Day — Taiwan's Sparkling Tea Brand" />
   <meta property="og:description"
     content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation." />
   <meta property="og:url" content="https://www.pingna-day.com/en/" />
@@ -31,235 +43,356 @@
   <meta property="og:site_name" content="Pingna Day" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pingna Day Sparkling Tea | Introducing Paochong Tea to the world." />
+  <meta name="twitter:title" content="Pingna Day — Taiwan's Sparkling Tea Brand" />
   <meta name="twitter:description"
     content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation." />
   <meta name="twitter:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
 
-  <title>
-    Pingna Day Sparkling Tea | Introducing Paochong Tea to the world.
-  </title>
+  <title>Pingna Day — Taiwan's Sparkling Tea Brand</title>
   <meta name="description"
     content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation." />
-
   <link rel="stylesheet" href="../assets/css/normalization.css" />
-  <link rel="stylesheet" href="../assets/css/responsive.css" />
   <link rel="stylesheet" href="../assets/css/home.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
 </head>
 
-<body id="story">
-  <header>
-    <nav class="container" style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        ">
+<body>
+  <!-- Floating Bubbles -->
+  <div class="bubbles-container" aria-hidden="true" id="bubbles"></div>
+
+  <!-- Header -->
+  <header id="site-header">
+    <nav class="container">
       <div class="logo">
-        <img src="../assets/images/pingna_day_logo.png" alt="Pingna Day Logo" />
+        <a href="#hero"><img src="../assets/images/pingna_day_logo.png" alt="Pingna Day 坪常日" /></a>
       </div>
-      <ul>
+      <button class="nav-toggle" aria-label="Menu" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sparkling">Sparkling Tea</a></li>
         <li><a href="#story">Our Story</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><a href="../zh/" class="lang-switch">中文</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <img src="../assets/images/pingna_day_home_1.jpg" alt="Pinglin Tea Farm" style="max-width: 100%" />
-    <section class="container">
-      <h2>Pinglin – The Most Aromatic Tea Craftsmanship</h2>
-      <p>
-        Over 200 years ago, a group of tea farmers and tea masters from Anxi,
-        Fujian, China, arrived in the Wenshan area and settled in Pinglin
-        (locally known as Pingna in Taiwanese Hokkien).
-      </p>
-      <p>
-        Inheriting their ancestors' tea-making techniques and benefiting from
-        Pinglin's unique climate and geographical conditions, they cultivated
-        exceptional tea that became renowned worldwide. Among these, Wenshan
-        Paochong Tea, known for its exquisite aroma, stands out. Tea farmers
-        in the area have adopted sustainable farming practices, allowing the
-        industry to thrive while minimizing its environmental impact and
-        preserving water resources. Through these sustainable and
-        regulation-compliant farming methods, the tea industry and the
-        environment can develop in harmony.
-      </p>
-      <p>
-        Today, as a key transit point between Taipei and Yilan, Pinglin
-        remains the last tea-producing region in the Wenshan area, preserving
-        its centuries-old tea craftsmanship.
-      </p>
-      <h2>Terroir Shapes – Pingna Day</h2>
-      <p>
-        In Pinglin’s dispersed village settlements, every home is a tea
-        factory. Most tea farmers are also tea masters, refining their craft
-        through shared knowledge of tea plantation management and tea-making
-        techniques. This exchange is key to crafting the perfect cup of tea
-        for consumers to enjoy.
-      </p>
-      <p>
-        “Honoring tradition, embracing innovation”—more than just a
-        philosophy, it’s a way of life. It’s about sharing Pinglin’s unique
-        terroir and culture with the world. Come visit Pinglin, immerse
-        yourself in its everyday charm, and experience Pinglin Day.
-      </p>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>
+          <span class="hero-brand">Pingna Day</span>
+          <span class="hero-tagline" style="color: #00747a; font-weight: 700; margin-top: 8px;">Official Sponsor of 2025 APEC Korea Taiwan Pavilion</span>
+        </h1>
+        <p class="hero-subtitle" style="font-size: 1.5rem; color: #333; margin-top: 10px;">Taiwanese Tea, Shining on the Global Stage</p>
+      </div>
+      <div class="hero-campaign-image">
+        <img src="../campaigns/2025-apec-korea/images/000_picture_with_banner.jpg" alt="2025 APEC Korea Scene" />
+      </div>
+      <div class="hero-buttons">
+        <a href="../campaigns/2025-apec-korea/index.html" class="btn-primary" style="background: #00747a;">View APEC Live</a>
+        <a href="#sparkling" class="btn-primary btn-outline">Explore Sparkling Tea</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
-    <section id="products" class="container anchor-offset">
-      <h2>Our Products</h2>
-      <div class="product">
-        <div class="flex flex-wrap-m flex-reverse-m">
-          <div class="flex-1 flex-basis-full-m">
-            <img class="max-width-full" src="../assets/images/paochong_tea_bag.jpg"
-              alt="Pinglin Wenshen Paochong Tea" />
+    <!-- Star Products: Sparkling Tea -->
+    <section id="sparkling" class="sparkling-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Signature Products</span>
+          <h2>Pingna Day Sparkling Tea</h2>
+          <p>Sugar-free · Alcohol-free · Real Tea Sparkling</p>
+        </div>
+        <div class="sparkling-grid">
+          <!-- Sparkling Paochong -->
+          <div class="sparkling-card reveal reveal-delay-1">
+            <div class="sparkling-card-image">
+              <img src="../assets/images/sparkling_paochong_tea.png" alt="Sparkling Paochong Tea" />
+            </div>
+            <div class="sparkling-card-content">
+              <h3>Sparkling Paochong Tea</h3>
+              <p>
+                Wenshan Paochong tea is renowned for its light fermentation and natural floral aroma. We've combined it
+                with sparkling water to create an innovative, refreshing drink — perfect for everyday enjoyment or
+                lively gatherings.
+              </p>
+              <div class="product-tags">
+                <span>Floral</span><span>Honey-green</span><span>Sugar-free</span><span>Alcohol-free</span>
+              </div>
+            </div>
           </div>
-          <div class="flex-1 flex-basis-full-m">
-            <h3>PINGLIN WENSHEN PAOCHONG TEA</h3>
-            <p>
-              The journey from vibrant green tea leaves to the beloved
-              Paochong tea is a meticulous one, often taking an entire day. It
-              starts with the careful gathering of fresh leaves, which are
-              then laid out under the sun to wither, a gentle first step that
-              harnesses the warmth of nature to start the transformation.
-            </p>
-            <p>
-              Paochong Tea is characterized by its dark green, strip-shaped
-              leaves, an elegant floral aroma, and a refreshing, smooth taste.
-              It presents liquor with a honey-green hue with a golden tint.
-              Common fragrance notes include white floral scents such as
-              jasmine, orchid, and gardenia, adding to its signature aromatic
-              profile.
-            </p>
+          <!-- Sparkling Orange -->
+          <div class="sparkling-card sparkling-card-orange reveal reveal-delay-2">
+            <div class="sparkling-card-image">
+              <img src="../assets/images/sparkling_orange_scented_tea.png" alt="Sparkling Orange Scented Tea" />
+            </div>
+            <div class="sparkling-card-content">
+              <h3>Sparkling Orange Scented Tea</h3>
+              <p>
+                Inspired by Pinglin's citrus-growing heritage, this drink blends the refreshing essence of local oranges
+                with Paochong tea. The natural sweet-tart citrus harmonizes with gentle bubbles for a layered taste
+                experience.
+              </p>
+              <div class="product-tags">
+                <span>Citrus</span><span>Sweet-tart</span><span>Sparkling</span><span>Local</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="product">
-        <div class="flex flex-wrap-m">
-          <div class="flex-1 flex-basis-full-m">
-            <h3>PINGLIN HONEY BLACK TEA</h3>
-            <p>
-              At the turn of spring and summer, Pinglin’s fresh tea leaves
-              arrive as a gift from nature. The gentle kiss of small green
-              leafhoppers imparts a unique honeyed aroma, filling the tea
-              gardens with their natural aroma.
-            </p>
-            <p>
-              By blending Paochong tea craftsmanship with black tea
-              processing, the interplay of stirring and fermentation creates a
-              tea infusion where floral, fruity, and honeyed notes coexist in
-              perfect harmony. The presence of golden-white buds marks its
-              distinctive appearance, while its radiant red liquor carries a
-              rich, honeyed sweetness—a flavor that lingers straight to the
-              heart.
-            </p>
+    </section>
+
+    <!-- Brand Story -->
+    <section id="story" class="story-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-image reveal">
+            <img src="../assets/images/pingna_day_home_1.jpg" alt="Pinglin Tea Farm" />
           </div>
-          <div class="flex-1 flex-basis-full-m">
-            <img class="max-width-full" src="../assets/images/honey_black_tea_bag.jpg" alt="Pinglin Honey Black Tea" />
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="flex flex-wrap-m flex-reverse-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/sparkling_paochong_tea.png"
-              alt="Sparkling Paochong Tea" />
-          </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>SPARKLING PAOCHONG TEA</h3>
+          <div class="story-content reveal reveal-delay-1">
+            <span class="section-label section-label-light">Our Story</span>
+            <h2>Terroir Shapes Pingna Day</h2>
             <p>
-              Wenshan Paochong tea is renowned for its light fermentation and
-              non-scented processing method. Crafted with care by skilled tea
-              masters, it features a natural floral aroma and a honey-green
-              hue — the signature traits of Paochong tea.
+              Over 200 years ago, tea farmers from Anxi, Fujian settled in Pinglin, bringing centuries of tea-making
+              expertise. Combined with Pinglin's unique climate and geography, they cultivated exceptional tea
+              renowned worldwide.
             </p>
             <p>
-              To invite more people to experience the charm of tea, we’ve
-              combined Wenshan Paochong tea with sparkling water to create
-              Pingna Day’s “Paochong Sparkling Tea.” This innovative drink
-              offers a refreshing twist — the same floral fragrance and
-              golden-green hue, now paired with fine, lively bubbles.
-            </p>
-            <p>
-              Whether for everyday enjoyment or a lively party, our sugar-free
-              and alcohol-free Paochong Sparkling Tea is the perfect choice
-              for a refreshing and elegant drink.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="flex flex-wrap-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>SPARKLING ORANGE SCENTED TEA</h3>
-            <p>
-              After launching the Paochong Sparkling Tea, Pingna Day
-              introduced a new option to delight those who “can’t live without
-              sweetness” or are more sensitive to the mild acidity of
-              sparkling drinks — the Orange-Scented Sparkling Tea.
-            </p>
-            <p>
-              Inspired by Pinglin’s historical citrus-growing heritage, this
-              drink blends the refreshing essence of local oranges with the
-              elegant aroma of Wenshan Paochong tea. The natural sweet-tart
-              flavor of citrus enhances the tea’s sweetness and harmonizes
-              beautifully with the gentle acidity of the bubbles, creating a
-              more layered and balanced taste experience.
-            </p>
-            <p>
-              Rooted in local culture yet tuned to modern preferences, this
-              sparkling tea invites you to step into the “Pinglin universe,”
-              where every sip captures the vibrant spirit and flavor of the
-              land.
-            </p>
-          </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/sparkling_orange_scented_tea.png"
-              alt="Pinglin Honey Black Tea" />
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="flex flex-wrap-m flex-reverse-m">
-          <div class="flex-1 flex-basis-full-m">
-            <img class="max-width-full" src="../assets/images/paochong_tea_candy.png"
-              alt="Pinglin Wenshen Paochong Tea Candy" style="max-height: 600px" />
-          </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>PINGLIN WENSHEN PAOCHONG TEA CANDY</h3>
-            <p>
-              Made with Wenshan Paochong tea — a specialty of Pinglin, New
-              Taipei City — this tea candy blends finely ground tea powder
-              with natural cane sugar. The Paochong tea’s delicate floral and
-              fruity aroma is infused into the sweetness, preserving the tea’s
-              elegant flavor while adding a smooth, melt-in-the-mouth
-              richness.
-            </p>
-            <p>
-              This candy perfectly balances the fragrance of tea and the
-              sweetness of sugar, offering a refreshing taste that’s never
-              overpowering. It’s easy to enjoy on the go and also makes an
-              ideal gift, showcasing Pinglin’s unique tea culture and its rich
-              local heritage.
+              In Pinglin, every home is a tea factory. "Honoring tradition, embracing innovation" — we bring
+              Pinglin's unique terroir to the world. Come visit Pinglin and experience what we call "Pingna Day."
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <h1>Contact Us</h1>
-      <p>
-        Have questions or want to learn more? Reach out to us at
-        <a href="mailto:hello@pingna-day.com">hello@pingna-day.com</a>.
-      </p>
+    <!-- Other Products -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">More from Pingna Day</span>
+          <h2>Explore More Products</h2>
+        </div>
+        <div class="products-grid">
+          <!-- Paochong Tea -->
+          <div class="product-card reveal reveal-delay-1">
+            <div class="product-card-image">
+              <img class="lightbox-trigger" data-gallery="../assets/images/paochong_tea_bag.jpg,../assets/images/paochong_tea_with_tree.jpg,../assets/images/paochong_tea_with_cup.jpg" src="../assets/images/paochong_tea_bag.jpg" alt="Pinglin Wenshan Paochong Tea" />
+            </div>
+            <div class="product-card-content">
+              <h3>Wenshan Paochong Tea</h3>
+              <p>
+                Dark green, strip-shaped leaves with an elegant floral aroma and a refreshing, smooth taste.
+                Honey-green liquor with jasmine, orchid, and gardenia notes.
+              </p>
+            </div>
+          </div>
+          <!-- Honey Black Tea -->
+          <div class="product-card reveal reveal-delay-2">
+            <div class="product-card-image">
+              <img class="lightbox-trigger" data-gallery="../assets/images/honey_black_tea_bag.jpg,../assets/images/honey_black_tea_with_tree.jpg,../assets/images/honey_black_tea_with_cup.jpg" src="../assets/images/honey_black_tea_bag.jpg" alt="Pinglin Honey Black Tea" />
+            </div>
+            <div class="product-card-content">
+              <h3>Pinglin Honey Black Tea</h3>
+              <p>
+                A gift from nature — leafhopper-kissed tea leaves create a unique honeyed aroma. Floral, fruity,
+                and honeyed notes coexist in a radiant red liquor.
+              </p>
+            </div>
+          </div>
+          <!-- Tea Candy -->
+          <div class="product-card reveal reveal-delay-3">
+            <div class="product-card-image">
+              <img class="lightbox-trigger" data-gallery="../assets/images/paochong_tea_candy.png,../assets/images/paochong_tea_candy_with_powder.jpg" src="../assets/images/paochong_tea_candy.png" alt="Paochong Tea Candy" />
+            </div>
+            <div class="product-card-content">
+              <h3>Paochong Tea Candy</h3>
+              <p>
+                Ground Paochong tea powder blended with natural cane sugar. Preserves the tea's elegant flavor
+                with a smooth, melt-in-the-mouth richness. Perfect as a gift.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <div class="container reveal">
+        <h2>Contact Us</h2>
+        <p>
+          Have questions or want to learn more? Reach out to us!
+        </p>
+        <a href="mailto:hello@pingna-day.com" class="contact-email">hello@pingna-day.com</a>
+      </div>
     </section>
   </main>
 
-  <img src="../assets/images/pingna_day_home_2.jpg" alt="Pinglin Tea Farm" style="max-width: 100%" />
-  <footer class="container">
-    <p class="center">&copy; 2026 Pingna Day. All rights reserved.</p>
+  <!-- Footer Image -->
+  <img src="../assets/images/pingna_day_home_2.jpg" alt="Pinglin River" style="width:100%;display:block;" />
+
+  <footer>
+    <div class="footer-social">
+      <a target="_blank" href="https://www.facebook.com/Pingna.Day" rel="noopener noreferrer">Facebook</a>
+      <a target="_blank" href="https://instagram.com/pingna.day" rel="noopener noreferrer">Instagram</a>
+      <a target="_blank" href="https://www.threads.com/@pingna.day" rel="noopener noreferrer">Threads</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 Pingna Day. All rights reserved.</p>
   </footer>
+
+
+  <!-- Lightbox DOM -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <button id="lightboxPrev" class="lightbox-btn lightbox-prev">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Gallery Image" />
+    </div>
+    <button id="lightboxNext" class="lightbox-btn lightbox-next">&#10095;</button>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Header scroll effect
+    var header = document.getElementById('site-header');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll reveal
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    // Generate floating bubbles
+    (function () {
+      var container = document.getElementById('bubbles');
+      var count = 18;
+      for (var i = 0; i < count; i++) {
+        var bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        var size = Math.random() * 20 + 6;
+        var left = Math.random() * 100;
+        var duration = Math.random() * 12 + 10;
+        var delay = Math.random() * 15;
+        var drift = (Math.random() - 0.5) * 80;
+        bubble.style.cssText =
+          'width:' + size + 'px;height:' + size + 'px;' +
+          'left:' + left + '%;' +
+          'animation-duration:' + duration + 's;' +
+          'animation-delay:' + delay + 's;' +
+          '--drift:' + drift + 'px;';
+        container.appendChild(bubble);
+      }
+    })();
+
+    // Lightbox Logic
+    (function() {
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImg = document.getElementById("lightboxImg");
+      var btnPrev = document.getElementById("lightboxPrev");
+      var btnNext = document.getElementById("lightboxNext");
+      var currentGallery = [];
+      var currentIndex = 0;
+
+      function openLightbox(galleryStr, index) {
+        if (!galleryStr) return;
+        currentGallery = galleryStr.split(",");
+        
+        // Preload images
+        currentGallery.forEach(function(src) {
+          var img = new Image();
+          img.src = src;
+        });
+        
+        currentIndex = index || 0;
+        updateImage();
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // prevent background scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      function updateImage() {
+        if (currentGallery.length === 0) return;
+        // Instantly switch source
+        lightboxImg.src = currentGallery[currentIndex];
+        lightboxImg.style.opacity = 1;
+        
+        btnPrev.style.display = currentGallery.length > 1 ? "flex" : "none";
+        btnNext.style.display = currentGallery.length > 1 ? "flex" : "none";
+      }
+
+      function nextImage(e) {
+        if (e) e.stopPropagation();
+        if (currentGallery.length <= 1) return;
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        updateImage();
+      }
+
+      function prevImage(e) {
+        if (e) e.stopPropagation();
+        if (currentGallery.length <= 1) return;
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateImage();
+      }
+
+      document.querySelectorAll(".lightbox-trigger").forEach(function(el) {
+        el.addEventListener("click", function() {
+          openLightbox(this.getAttribute("data-gallery"), 0);
+        });
+      });
+
+      document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", function(e) {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      btnNext.addEventListener("click", nextImage);
+      btnPrev.addEventListener("click", prevImage);
+
+      document.addEventListener("keydown", function(e) {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+      });
+    })();
+
+  </script>
 </body>
 
 </html>

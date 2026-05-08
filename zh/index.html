@@ -4,6 +4,17 @@
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-36C73MZM6G"></script>
+
+  <!-- Lightbox DOM -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <button id="lightboxPrev" class="lightbox-btn lightbox-prev">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Gallery Image" />
+    </div>
+    <button id="lightboxNext" class="lightbox-btn lightbox-next">&#10095;</button>
+  </div>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -24,197 +35,390 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://www.pingna-day.com/assets/images/favicon.png" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="zh_Hant" />
-  <meta property="og:title" content="坪常日包種氣泡茶｜讓全世界都認識包種茶" />
-  <meta property="og:description" content="坪常日｜包種氣泡茶與橘香氣泡茶：堅持傳統，持續創新。" />
-  <meta property="og:url" content="https://www.pingna-day.com/en/" />
+  <meta property="og:title" content="坪常日｜台灣氣泡茶代表品牌" />
+  <meta property="og:description" content="坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。" />
+  <meta property="og:url" content="https://www.pingna-day.com/zh/" />
   <meta property="og:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
-  <meta property="og:site_name" content="Pingna Day" />
+  <meta property="og:site_name" content="Pingna Day 坪常日" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="坪常日包種氣泡茶｜讓全世界都認識包種茶" />
-  <meta name="twitter:description" content="坪常日｜包種氣泡茶與橘香氣泡茶：堅持傳統，持續創新。" />
+  <meta name="twitter:title" content="坪常日｜台灣氣泡茶代表品牌" />
+  <meta name="twitter:description" content="坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。" />
   <meta name="twitter:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
 
-  <title>坪常日包種氣泡茶｜讓全世界都認識包種茶</title>
-  <meta name="twitter:description" content="坪常日｜包種氣泡茶與橘香氣泡茶：堅持傳統，持續創新。" />
+  <title>坪常日｜台灣氣泡茶代表品牌</title>
+  <meta name="description" content="坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。" />
   <link rel="stylesheet" href="../assets/css/normalization.css" />
-  <link rel="stylesheet" href="../assets/css/responsive.css" />
   <link rel="stylesheet" href="../assets/css/home.css" />
+  <link rel="stylesheet" href="../assets/css/responsive.css" />
 </head>
 
-<body id="story">
-  <header>
-    <nav class="container align-center" style="display: flex; justify-content: space-between">
+<body>
+  <!-- Floating Bubbles -->
+  <div class="bubbles-container" aria-hidden="true" id="bubbles"></div>
+
+  <!-- Header -->
+  <header id="site-header">
+    <nav class="container">
       <div class="logo">
-        <img src="../assets/images/pingna_day_logo.png" alt="Pingna Day Logo" />
+        <a href="#hero"><img src="../assets/images/pingna_day_logo.png" alt="坪常日 Pingna Day" /></a>
       </div>
-      <ul>
-        <li><a href="#story">坪常日的故事</a></li>
-        <li><a href="#products">坪常日的產品</a></li>
+      <button class="nav-toggle" aria-label="選單" id="navToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#sparkling">氣泡茶</a></li>
+        <li><a href="#story">品牌故事</a></li>
+        <li><a href="#products">更多產品</a></li>
         <li><a href="#contact">聯絡我們</a></li>
+        <li><a href="../en/" class="lang-switch">EN</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <img src="../assets/images/pingna_day_home_1.jpg" alt="Pinglin Tea Farm" style="max-width: 100%" />
-    <section class="container">
-      <h2>新北坪林 – 最香的製茶手藝</h2>
-      <p>
-        兩百多年前，一群來自福建安溪的茶農及製茶師傅來到了大文山、落腳在坪林。傳承自祖輩的製茶技術，加上坪林得天獨厚的氣候與地理環境，讓這裡的「好茶」名揚四海。
-      </p>
-      <p>
-        而注重香氣的文山包種茶，更是在臺北水源特定區的法令限制下，
-        持續以符合法規的耕作方式，讓茶產業與環境能夠穩定發展。而坪林作為臺北-宜蘭的中繼站，現今亦成為了大文山中最後的茶鄉。
-      </p>
-      <h2>有了風土 – 才是坪常日</h2>
-      <p>
-        散村聚落的坪林，家庭即是製茶廠，大多茶農也是茶師，為了讓製茶手藝持續精進，針對茶園管理、製茶流程更是需要相互交流，才能製出一杯好茶提供給消費者品評。
-      </p>
-      <p>
-        「堅持傳統、持續創新」，結合在地的茶產業，不只是推廣坪林的生活，而是將坪林的在地風土帶給大家，來坪林走走，帶給大家的是我們所期待的「坪常日」。
-      </p>
+    <!-- Hero -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>
+          <span class="hero-brand">坪常日</span>
+          <span class="hero-tagline" style="color: #00747a; font-weight: 700; margin-top: 8px;">榮登 2025 APEC Korea 台灣館指定贊助</span>
+        </h1>
+        <p class="hero-subtitle" style="font-size: 1.5rem; color: #333; margin-top: 10px;">台灣茶香，閃耀國際舞台</p>
+      </div>
+      <div class="hero-campaign-image">
+        <img src="../campaigns/2025-apec-korea/images/000_picture_with_banner.jpg" alt="2025 APEC Korea 現場" />
+      </div>
+      <div class="hero-buttons">
+        <a href="../campaigns/2025-apec-korea/index.html" class="btn-primary" style="background: #00747a;">觀看 APEC 現場直擊</a>
+        <a href="#sparkling" class="btn-primary btn-outline">探索氣泡茶</a>
+      </div>
+      <div class="scroll-indicator">
+        <span>向下探索</span>
+        <div class="scroll-arrow"></div>
+      </div>
     </section>
 
-    <section id="products" class="container anchor-offset">
-      <h2>坪常日的產品</h2>
-      <div class="product">
-        <div class="flex flex-gap-20 flex-wrap-m flex-reverse-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/paochong_tea_bag.jpg" alt="坪林文山包種茶" />
+    <!-- Star Products: Sparkling Tea -->
+    <section id="sparkling" class="sparkling-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">明星產品</span>
+          <h2>坪常日氣泡茶</h2>
+          <p>無糖 · 無酒精 · 真茶氣泡</p>
+        </div>
+        <div class="sparkling-grid">
+          <!-- 包種氣泡茶 -->
+          <div class="sparkling-card reveal reveal-delay-1">
+            <div class="sparkling-card-image">
+              <img src="../assets/images/sparkling_paochong_tea.png" alt="包種氣泡茶" />
+            </div>
+            <div class="sparkling-card-content">
+              <h3>包種氣泡茶</h3>
+              <p>
+                文山包種茶以輕發酵、無薰花式製程聞名，帶有花香、水色蜜綠顯黃。我們將文山包種茶與氣泡水結合，創新口感、獨特風味，無論日常或派對，都是您最佳的飲品選擇。
+              </p>
+              <div class="product-tags">
+                <span>花香</span><span>蜜綠</span><span>無糖</span><span>無酒精</span>
+              </div>
+              <div class="purchase-links">
+                <a class="btn-purchase" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14813200"
+                  target="_blank" rel="noopener noreferrer">
+                  momo購物網
+                </a>
+                <a class="btn-purchase-alt" href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwNA%3D%3D"
+                  target="_blank" rel="noopener noreferrer">
+                  台灣好農
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>坪林文山包種茶</h3>
-            <p>
-              坪林的包種茶，一年採收以春、冬兩李為主。從採摘茶菁、日光萎潤、室內萎潤、攪拌、炒青、揉捻、乾燦等，需耗費將近24小時的製程。
-            </p>
-            <p>
-              包種茶外觀呈墨綠條索狀、香氣高雅似花香、滋味甘醇鮮活，水色呈蜜綠顯黃。其中以茉莉花、蘭花、梔子花等白色花香皆是常見的類型。
-            </p>
-            <p class="flex flex-gap-20 align-center">
-              購買通路：
-              <a class="flex align-center flex-gap-10"
-                href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwMg%3D%3D" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_wonderfulfood.png" alt="" height="32"
-                  style="padding: 4px" /><span>台灣好農</span></a>
-            </p>
+          <!-- 橘香氣泡茶 -->
+          <div class="sparkling-card sparkling-card-orange reveal reveal-delay-2">
+            <div class="sparkling-card-image">
+              <img src="../assets/images/sparkling_orange_scented_tea.png" alt="橘香氣泡茶" />
+            </div>
+            <div class="sparkling-card-content">
+              <h3>橘香氣泡茶</h3>
+              <p>
+                結合新北坪林在地柑橘的產業脈絡，透過柑橘自帶酸甜與氣泡弱酸性的結合，讓飲品層次感提升。兼顧在地性與消費需求，讓您猶如置身坪林宇宙中享受繽紛。
+              </p>
+              <div class="product-tags">
+                <span>柑橘</span><span>酸甜</span><span>氣泡</span><span>在地</span>
+              </div>
+              <div class="purchase-links">
+                <a class="btn-purchase" href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14813200"
+                  target="_blank" rel="noopener noreferrer">
+                  momo購物網
+                </a>
+                <a class="btn-purchase-alt" href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwNQ%3D%3D"
+                  target="_blank" rel="noopener noreferrer">
+                  台灣好農
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="product">
-        <div class="flex flex-gap-20 flex-wrap-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>坪林蜜香紅茶(香韻紅茶)</h3>
-            <p>
-              坪林春夏之交、小綠葉蟬著蜒後，天然香氣的茶菁瀰漫在茶園間。結合包種茶技藝與紅茶的製程，攪拌與發酵的雙重作用，讓花、果蜜同時存在於茶湯中。
-            </p>
-            <p>
-              時不時帶著黃金白毫是外觀鮮明印記、蜜甜香氣馥郁在亮紅色的茶湯之中，直覺鮮明且甜入心頭。
-            </p>
-            <p class="flex flex-gap-20 align-center">
-              購買通路：
-              <a class="flex align-center flex-gap-10"
-                href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwMw%3D%3D" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_wonderfulfood.png" alt="" height="32"
-                  style="padding: 4px" /><span>台灣好農</span></a>
-            </p>
+    </section>
+
+    <!-- Brand Story -->
+    <section id="story" class="story-section">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-image reveal">
+            <img src="../assets/images/pingna_day_home_1.jpg" alt="坪林茶園" />
           </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/honey_black_tea_bag.jpg" alt="坪林蜜香紅茶(香韻紅茶)" />
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="flex flex-gap-20 flex-wrap-m flex-reverse-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/sparkling_paochong_tea.png" alt="包種氣泡茶" />
-          </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>包種氣泡茶</h3>
+          <div class="story-content reveal reveal-delay-1">
+            <span class="section-label section-label-light">品牌故事</span>
+            <h2>有了風土，才是坪常日</h2>
             <p>
-              文山包種茶以輕發酵、無薰花式製程聞名，透過茶師細心製作，帶有花香、水色蜜綠顯黃正是包種茶特色。
+              兩百多年前，一群來自福建安溪的茶農及製茶師傅來到了大文山、落腳在坪林。傳承自祖輩的製茶技術，加上坪林得天獨厚的氣候與地理環境，讓這裡的「好茶」名揚四海。
             </p>
             <p>
-              為推廣讓更多人嘗試茶飲，我們選擇將文山包種茶與氣泡水結合，推出坪常日的「包種氣泡茶」，創新口感、獨特風味，一樣的花香與蜜綠黃搭配綿密的氣泡感，無論日常、派對，無糖、無酒精的包種氣泡茶絕對是您最佳的飲品選擇。
-            </p>
-            <p class="flex flex-gap-20 align-center">
-              購買通路：<a class="flex align-center flex-gap-10"
-                href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14618305" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_momo_logo.svg" alt=""
-                  height="40" /><span>momo購物網</span></a>
-              <a class="flex align-center flex-gap-10"
-                href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwNA%3D%3D" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_wonderfulfood.png" alt="" height="32"
-                  style="padding: 4px" /><span>台灣好農</span></a>
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="flex flex-gap-20 flex-wrap-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>橘香氣泡茶</h3>
-            <p>
-              坪常日推出包種氣泡茶後，為滿足「無糖不歡」以及味覺對氣泡弱酸性較為敏銳的消費族群有其他選項，結合了新北坪林在地早年種植柑橘的產業脈絡，推出「橘香氣泡茶」。
-            </p>
-            <p>
-              透過柑橘自帶酸甜增加茶飲的甜度以及與氣泡弱酸性的結合，讓飲品的層次感提升。兼顧在地性與消費需求，讓品嘗氣泡茶的您猶如置身坪林宇宙中享受在地的繽紛。
-            </p>
-            <p class="flex flex-gap-20 align-center">
-              購買通路：<a class="flex align-center flex-gap-10"
-                href="https://www.momoshop.com.tw/goods/GoodsDetail.jsp?i_code=14618304" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_momo_logo.svg" alt=""
-                  height="40" /><span>momo購物網</span></a>
-              <a class="flex align-center flex-gap-10"
-                href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwNQ%3D%3D" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_wonderfulfood.png" alt="" height="32"
-                  style="padding: 4px" /><span>台灣好農</span></a>
-            </p>
-          </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/sparkling_orange_scented_tea.png" alt="橘香氣泡茶" />
-          </div>
-        </div>
-      </div>
-      <div class="product">
-        <div class="flex flex-gap-20 flex-wrap-m flex-reverse-m">
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <img class="max-width-full" src="../assets/images/paochong_tea_candy.png" alt="坪林文山包種茶糖"
-              style="max-height: 600px" />
-          </div>
-          <div class="flex-1 flex-basis-full-m flex-basis-half-l">
-            <h3>坪林文山包種茶糖</h3>
-            <p>
-              以新北市坪林盛產的文山包種茶為基底，以研磨茶粉搭配天然蔗糖結合而成。包種茶清香雅致、帶有花果香，融入糖中後，不僅保留茶韻，更增添入口即化的甘潤滋味。
-            </p>
-            <p>
-              此茶糖兼具茶香與甜味，口感清爽不膩，既能隨身享用，也適合作為伴手禮，展現坪林獨有的茶鄉風味與文化底蘊。
-            </p>
-            <p class="flex flex-gap-20 align-center">
-              購買通路：
-              <a class="flex align-center flex-gap-10"
-                href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwOA%3D%3D" target="_blank" noopener
-                noreferrer><img src="../assets/icons/ecommerce_channel_wonderfulfood.png" alt="" height="32"
-                  style="padding: 4px" /><span>台灣好農</span></a>
+              散村聚落的坪林，家庭即是製茶廠，大多茶農也是茶師。「堅持傳統、持續創新」，我們將坪林的在地風土帶給大家，來坪林走走，帶給大家我們所期待的「坪常日」。
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="container">
-      <h1>聯絡我們</h1>
-      <p>
-        想要問任何問題，歡迎聯繫我們！透過電子郵件與我們聯絡：
-        <a href="mailto:hello@pingna-day.com">hello@pingna-day.com</a>.
-      </p>
+    <!-- Other Products -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">更多坪常日</span>
+          <h2>探索更多產品</h2>
+        </div>
+        <div class="products-grid">
+          <!-- 包種茶 -->
+          <div class="product-card reveal reveal-delay-1">
+            <div class="product-card-image">
+              <img class="lightbox-trigger"
+                data-gallery="../assets/images/paochong_tea_bag.jpg,../assets/images/paochong_tea_with_tree.jpg,../assets/images/paochong_tea_with_cup.jpg"
+                src="../assets/images/paochong_tea_bag.jpg" alt="坪林文山包種茶" />
+            </div>
+            <div class="product-card-content">
+              <h3>坪林文山包種茶</h3>
+              <p>
+                外觀呈墨綠條索狀、香氣高雅似花香、滋味甘醇鮮活，水色呈蜜綠顯黃。以茉莉花、蘭花、梔子花等白色花香皆是常見的類型。
+              </p>
+              <div class="purchase-links">
+                <a class="btn-purchase-alt" href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwMg%3D%3D"
+                  target="_blank" rel="noopener noreferrer">
+                  台灣好農
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 蜜香紅茶 -->
+          <div class="product-card reveal reveal-delay-2">
+            <div class="product-card-image">
+              <img class="lightbox-trigger"
+                data-gallery="../assets/images/honey_black_tea_bag.jpg,../assets/images/honey_black_tea_with_tree.jpg,../assets/images/honey_black_tea_with_cup.jpg"
+                src="../assets/images/honey_black_tea_bag.jpg" alt="坪林蜜香紅茶" />
+            </div>
+            <div class="product-card-content">
+              <h3>坪林蜜香紅茶</h3>
+              <p>
+                坪林春夏之交、小綠葉蟬著蜒後的天然香氣茶菁。攪拌與發酵的雙重作用，讓花、果蜜同時存在於茶湯中，蜜甜香氣馥郁。
+              </p>
+              <div class="purchase-links">
+                <a class="btn-purchase-alt" href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwMw%3D%3D"
+                  target="_blank" rel="noopener noreferrer">
+                  台灣好農
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 茶糖 -->
+          <div class="product-card reveal reveal-delay-3">
+            <div class="product-card-image">
+              <img class="lightbox-trigger"
+                data-gallery="../assets/images/paochong_tea_candy.png,../assets/images/paochong_tea_candy_with_powder.jpg"
+                src="../assets/images/paochong_tea_candy.png" alt="坪林文山包種茶糖" />
+            </div>
+            <div class="product-card-content">
+              <h3>坪林文山包種茶糖</h3>
+              <p>
+                以文山包種茶為基底，研磨茶粉搭配天然蔗糖。保留茶韻，增添入口即化的甘潤滋味，口感清爽不膩，適合作為伴手禮。
+              </p>
+              <div class="purchase-links">
+                <a class="btn-purchase-alt" href="https://www.wonderfulfood.com.tw/Product/UFJEMDIxOTEwMDAwOA%3D%3D"
+                  target="_blank" rel="noopener noreferrer">
+                  台灣好農
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+      <div class="container reveal">
+        <h2>聯絡我們</h2>
+        <p>
+          想要問任何問題，歡迎聯繫我們！
+        </p>
+        <a href="mailto:hello@pingna-day.com" class="contact-email">hello@pingna-day.com</a>
+      </div>
     </section>
   </main>
 
-  <img src="../assets/images/pingna_day_home_2.jpg" alt="Pinglin Tea Farm" style="max-width: 100%" />
-  <footer class="container">
-    <p class="center">&copy; 2026 坪常日。 版權所有。</p>
+  <!-- Footer Image -->
+  <img src="../assets/images/pingna_day_home_2.jpg" alt="坪林溪流" style="width:100%;display:block;" />
+
+  <footer>
+    <div class="footer-social">
+      <a target="_blank" href="https://www.facebook.com/Pingna.Day" rel="noopener noreferrer">Facebook</a>
+      <a target="_blank" href="https://instagram.com/pingna.day" rel="noopener noreferrer">Instagram</a>
+      <a target="_blank" href="https://www.threads.com/@pingna.day" rel="noopener noreferrer">Threads</a>
+    </div>
+    <p class="footer-copy">&copy; 2026 坪常日。版權所有。</p>
   </footer>
+
+
+  <!-- Lightbox DOM -->
+  <div id="lightbox" class="lightbox">
+    <button id="lightboxClose" class="lightbox-close">&times;</button>
+    <button id="lightboxPrev" class="lightbox-btn lightbox-prev">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Gallery Image" />
+    </div>
+    <button id="lightboxNext" class="lightbox-btn lightbox-next">&#10095;</button>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('navToggle').addEventListener('click', function () {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+
+    // Header scroll effect
+    var header = document.getElementById('site-header');
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+
+    // Scroll reveal
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      revealObserver.observe(el);
+    });
+
+    // Generate floating bubbles
+    (function () {
+      var container = document.getElementById('bubbles');
+      var count = 18;
+      for (var i = 0; i < count; i++) {
+        var bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        var size = Math.random() * 20 + 6;
+        var left = Math.random() * 100;
+        var duration = Math.random() * 12 + 10;
+        var delay = Math.random() * 15;
+        var drift = (Math.random() - 0.5) * 80;
+        bubble.style.cssText =
+          'width:' + size + 'px;height:' + size + 'px;' +
+          'left:' + left + '%;' +
+          'animation-duration:' + duration + 's;' +
+          'animation-delay:' + delay + 's;' +
+          '--drift:' + drift + 'px;';
+        container.appendChild(bubble);
+      }
+    })();
+
+    // Lightbox Logic
+    (function () {
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImg = document.getElementById("lightboxImg");
+      var btnPrev = document.getElementById("lightboxPrev");
+      var btnNext = document.getElementById("lightboxNext");
+      var currentGallery = [];
+      var currentIndex = 0;
+
+      function openLightbox(galleryStr, index) {
+        if (!galleryStr) return;
+        currentGallery = galleryStr.split(",");
+        currentIndex = index || 0;
+        updateImage();
+        lightbox.classList.add("active");
+        document.body.style.overflow = "hidden"; // prevent background scrolling
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      function updateImage() {
+        if (currentGallery.length === 0) return;
+        lightboxImg.style.opacity = 0;
+        setTimeout(function () {
+          lightboxImg.src = currentGallery[currentIndex];
+          lightboxImg.style.opacity = 1;
+        }, 200);
+
+        btnPrev.style.display = currentGallery.length > 1 ? "flex" : "none";
+        btnNext.style.display = currentGallery.length > 1 ? "flex" : "none";
+      }
+
+      function nextImage(e) {
+        if (e) e.stopPropagation();
+        if (currentGallery.length <= 1) return;
+        currentIndex = (currentIndex + 1) % currentGallery.length;
+        updateImage();
+      }
+
+      function prevImage(e) {
+        if (e) e.stopPropagation();
+        if (currentGallery.length <= 1) return;
+        currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateImage();
+      }
+
+      document.querySelectorAll(".lightbox-trigger").forEach(function (el) {
+        el.addEventListener("click", function () {
+          openLightbox(this.getAttribute("data-gallery"), 0);
+        });
+      });
+
+      document.getElementById("lightboxClose").addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", function (e) {
+        if (e.target === lightbox || e.target.classList.contains("lightbox-content")) {
+          closeLightbox();
+        }
+      });
+
+      btnNext.addEventListener("click", nextImage);
+      btnPrev.addEventListener("click", prevImage);
+
+      document.addEventListener("keydown", function (e) {
+        if (!lightbox.classList.contains("active")) return;
+        if (e.key === "Escape") closeLightbox();
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+      });
+    })();
+
+  </script>
 </body>
 
 </html>
