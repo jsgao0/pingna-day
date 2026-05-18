@@ -1,62 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+import type { Metadata } from "next";
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-36C73MZM6G"></script>
+export const metadata: Metadata = {
+  title: "Pingna Day — Taiwan's Sparkling Tea Brand",
+  description: "Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation.",
+};
 
-  <!-- Lightbox DOM -->
-  <div id="lightbox" class="lightbox">
-    <button id="lightboxClose" class="lightbox-close">&times;</button>
-    <button id="lightboxPrev" class="lightbox-btn lightbox-prev">&#10094;</button>
-    <div class="lightbox-content">
-      <img id="lightboxImg" src="" alt="Gallery Image" />
-    </div>
-    <button id="lightboxNext" class="lightbox-btn lightbox-next">&#10095;</button>
-  </div>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-36C73MZM6G');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="alternate" hreflang="en" href="https://www.pingna-day.com/en/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://www.pingna-day.com/zh/" />
-  <link rel="alternate" hreflang="x-default" href="https://www.pingna-day.com/" />
-  <link rel="canonical" href="https://www.pingna-day.com/en/" />
-
-  <link rel="icon" type="image/png" sizes="16x16" href="https://www.pingna-day.com/assets/images/favicon.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="Pingna Day — Taiwan's Sparkling Tea Brand" />
-  <meta property="og:description"
-    content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation." />
-  <meta property="og:url" content="https://www.pingna-day.com/en/" />
-  <meta property="og:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
-  <meta property="og:site_name" content="Pingna Day" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pingna Day — Taiwan's Sparkling Tea Brand" />
-  <meta name="twitter:description"
-    content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation." />
-  <meta name="twitter:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
-
-  <title>Pingna Day — Taiwan's Sparkling Tea Brand</title>
-  <meta name="description"
-    content="Pingna Day | Paochong Sparkling Tea and Orange-Scented Sparkling Tea. From Pinglin, Taiwan — honoring tradition, embracing innovation." />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/normalization.css" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/home.css" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/responsive.css" />
-</head>
-
-<body>
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: `
   <!-- Floating Bubbles -->
   <div class="bubbles-container" aria-hidden="true" id="bubbles"></div>
 
@@ -95,7 +47,7 @@
         <img src="https://www.pingna-day.com/campaigns/2025-apec-korea/images/000_picture_with_banner.jpg" alt="2025 APEC Korea Scene" />
       </div>
       <div class="hero-buttons">
-        <a href="../campaigns/2025-apec-korea" class="btn-primary" style="background: #00747a;">View APEC Live</a>
+        <a href="/en/campaigns/2025-apec-korea" class="btn-primary" style="background: #00747a;">View APEC Live</a>
         <a href="#sparkling" class="btn-primary btn-outline">Explore Sparkling Tea</a>
       </div>
       <div class="scroll-indicator">
@@ -239,7 +191,12 @@
         <p>
           Have questions or want to learn more? Reach out to us!
         </p>
-        <a href="mailto:hello@pingna-day.com" class="contact-email">hello@pingna-day.com</a>
+        <form action="https://formspree.io/f/mzdwbqjg" method="POST" class="contact-form" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+          <input type="text" name="name" placeholder="Your Name" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" />
+          <input type="email" name="email" placeholder="Your Email" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" />
+          <textarea name="message" placeholder="Your Message" required rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+          <button type="submit" class="btn-primary" style="background: #00747a; color: #fff; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">Submit</button>
+        </form>
       </div>
     </section>
   </main>
@@ -401,6 +358,7 @@
     })();
 
   </script>
-</body>
-
-</html>
+` }} />
+    </>
+  );
+}

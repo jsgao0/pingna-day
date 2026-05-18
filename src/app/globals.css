@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@import "../../public/assets/css/normalization.css";
+@import "../../public/assets/css/home.css";
+@import "../../public/assets/css/responsive.css";

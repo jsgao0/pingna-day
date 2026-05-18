@@ -1,59 +1,14 @@
-<!DOCTYPE html>
-<html lang="zh-Hant">
+import type { Metadata } from "next";
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-36C73MZM6G"></script>
+export const metadata: Metadata = {
+  title: "坪常日｜台灣氣泡茶代表品牌",
+  description: "坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。",
+};
 
-  <!-- Lightbox DOM -->
-  <div id="lightbox" class="lightbox">
-    <button id="lightboxClose" class="lightbox-close">&times;</button>
-    <button id="lightboxPrev" class="lightbox-btn lightbox-prev">&#10094;</button>
-    <div class="lightbox-content">
-      <img id="lightboxImg" src="" alt="Gallery Image" />
-    </div>
-    <button id="lightboxNext" class="lightbox-btn lightbox-next">&#10095;</button>
-  </div>
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-36C73MZM6G');
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="alternate" hreflang="en" href="https://www.pingna-day.com/en/" />
-  <link rel="alternate" hreflang="zh-Hant" href="https://www.pingna-day.com/zh/" />
-  <link rel="alternate" hreflang="x-default" href="https://www.pingna-day.com/" />
-  <link rel="canonical" href="https://www.pingna-day.com/zh/" />
-
-  <link rel="icon" type="image/png" sizes="16x16" href="https://www.pingna-day.com/assets/images/favicon.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="zh_Hant" />
-  <meta property="og:title" content="坪常日｜台灣氣泡茶代表品牌" />
-  <meta property="og:description" content="坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。" />
-  <meta property="og:url" content="https://www.pingna-day.com/zh/" />
-  <meta property="og:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
-  <meta property="og:site_name" content="Pingna Day 坪常日" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="坪常日｜台灣氣泡茶代表品牌" />
-  <meta name="twitter:description" content="坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。" />
-  <meta name="twitter:image" content="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" />
-
-  <title>坪常日｜台灣氣泡茶代表品牌</title>
-  <meta name="description" content="坪常日｜源自新北坪林的氣泡茶品牌。包種氣泡茶與橘香氣泡茶，堅持傳統、持續創新。" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/normalization.css" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/home.css" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/responsive.css" />
-</head>
-
-<body>
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: `
   <!-- Floating Bubbles -->
   <div class="bubbles-container" aria-hidden="true" id="bubbles"></div>
 
@@ -91,7 +46,7 @@
         <img src="https://www.pingna-day.com/campaigns/2025-apec-korea/images/000_picture_with_banner.jpg" alt="2025 APEC Korea 現場" />
       </div>
       <div class="hero-buttons">
-        <a href="../campaigns/2025-apec-korea" class="btn-primary" style="background: #00747a;">觀看 APEC 現場直擊</a>
+        <a href="/zh/campaigns/2025-apec-korea" class="btn-primary" style="background: #00747a;">觀看 APEC 現場直擊</a>
         <a href="#sparkling" class="btn-primary btn-outline">探索氣泡茶</a>
       </div>
       <div class="scroll-indicator">
@@ -263,7 +218,12 @@
         <p>
           想要問任何問題，歡迎聯繫我們！
         </p>
-        <a href="mailto:hello@pingna-day.com" class="contact-email">hello@pingna-day.com</a>
+        <form action="https://formspree.io/f/mzdwbqjg" method="POST" class="contact-form" style="max-width: 500px; margin: 0 auto; display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+          <input type="text" name="name" placeholder="您的姓名" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" />
+          <input type="email" name="email" placeholder="您的 Email" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" />
+          <textarea name="message" placeholder="您的訊息" required rows="4" style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></textarea>
+          <button type="submit" class="btn-primary" style="background: #00747a; color: #fff; padding: 10px; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">送出</button>
+        </form>
       </div>
     </section>
   </main>
@@ -420,6 +380,7 @@
     })();
 
   </script>
-</body>
-
-</html>
+` }} />
+    </>
+  );
+}

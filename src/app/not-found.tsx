@@ -1,4 +1,14 @@
-<!doctype html>
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "404 Not Found",
+  description: "",
+};
+
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: `<!doctype html>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-36C73MZM6G"></script>
 <script>
@@ -15,3 +25,7 @@
   // 專案頁 404 自動導回首頁
   location.replace('/');
 </script>
+` }} />
+    </>
+  );
+}

@@ -1,278 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+import type { Metadata } from "next";
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-36C73MZM6G"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
+export const metadata: Metadata = {
+  title: "Pingna Day Sparkling Tea | Featured at 2025 APEC Korea | Official Page",
+  description: "Pingna Day Sparkling Paochong Tea & Orange Scented Tea are the official sponsors of the Taiwan Pavilion at 2025 APEC Korea.",
+};
 
-    gtag('config', 'G-36C73MZM6G');
-  </script>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Pingna Day Sparkling Tea | Featured at 2025 APEC Korea | Official Page</title>
-
-  <link rel="canonical" href="https://www.pingna-day.com/campaigns/2025-apec-korea" />
-  <meta name="description"
-    content="Pingna Day Sparkling Paochong Tea & Orange Scented Tea are the official sponsors of the Taiwan Pavilion at 2025 APEC Korea." />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="zh_TW" />
-  <meta property="og:title" content="坪常日Paochong Tea｜登上 2025 APEC Korea 舞台" />
-  <meta property="og:description"
-    content="Official Sponsor. See live photos and experience the confidence of Taiwanese tea on the global stage." />
-
-  <meta property="og:image" content="https://www.pingna-day.com/campaigns/2025-apec-korea/images/preview_home.jpg" />
-  <meta property="og:url" content="https://www.pingna-day.com/campaigns/2025-apec-korea" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <link rel="icon" href="/assets/images/favicon.png" />
-
-  <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "坪常日Paochong Tea｜2025 APEC Korea 指定贊助",
-        "description": "坪常日Paochong Tea、Orange Tea於 2025 APEC Korea 現場亮相。",
-        "publisher": {
-          "@type": "Organization",
-          "name": "坪常日 Pingna Day"
-        }
-      }
-    </script>
-
-
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/normalization.css" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/home.css" />
-  <link rel="stylesheet" href="https://www.pingna-day.com/assets/css/responsive.css" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --card: #fdfbf7;
-      --text: #2d3748;
-      --muted: #718096;
-      --brand: #00747a;
-      --brand-2: #009794;
-    }
-
-    body {
-      margin: 0;
-      font-family: var(--font-body, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-    }
-
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 120px 24px 40px;
-    }
-
-    header.apec-hero {
-      display: grid;
-      gap: 16px;
-      padding: 24px 0 40px;
-      text-align: center;
-    }
-
-    .eyebrow {
-      color: var(--brand);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      font-size: 13px;
-    }
-
-    .apec-hero h1 {
-      margin: 0;
-      font-size: clamp(28px, 4.5vw, 44px);
-      line-height: 1.2;
-      color: var(--text);
-    }
-
-    .sub {
-      color: var(--muted);
-      font-size: clamp(15px, 2.2vw, 18px);
-    }
-
-    .apec-card {
-      background: var(--card);
-      border: 1px solid rgba(0, 0, 0, 0.05);
-      border-radius: 16px;
-      overflow: clip;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    }
-
-    .apec-card+.apec-card {
-      margin-top: 28px;
-    }
-
-    .media {
-      display: block;
-      width: 100%;
-      aspect-ratio: 16/9;
-      object-fit: cover;
-      background: #eee;
-    }
-
-    figure {
-      margin: 0;
-    }
-
-    figcaption {
-      padding: 12px 16px 16px;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .apec-content {
-      padding: 22px 20px 24px;
-    }
-
-    .apec-content h2 {
-      margin: 0 0 10px;
-      font-size: clamp(20px, 3vw, 26px);
-      color: var(--text);
-    }
-
-    .apec-content p {
-      margin: 0 0 14px;
-    }
-
-    .cta-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 14px;
-    }
-
-    .btn {
-      appearance: none;
-      border: 0;
-      padding: 12px 18px;
-      border-radius: 999px;
-      cursor: pointer;
-      font-weight: 700;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      transition: all 0.2s;
-    }
-
-    .btn-primary {
-      background: var(--brand);
-      color: #ffffff;
-    }
-
-    .btn-secondary {
-      background: var(--brand-2);
-      color: #ffffff;
-    }
-
-    .btn:hover {
-      filter: brightness(1.05);
-      transform: translateY(-1px);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-
-    @media (min-width: 800px) {
-      .grid-2 {
-        grid-template-columns: 1.15fr 0.85fr;
-      }
-    }
-
-    .feature {
-      display: grid;
-      gap: 10px;
-      grid-template-columns: 28px 1fr;
-      align-items: start;
-    }
-
-    .dot {
-      width: 10px;
-      height: 10px;
-      background: var(--brand);
-      border-radius: 999px;
-      margin-top: 8px;
-      box-shadow: 0 0 0 6px rgba(0, 116, 122, 0.15);
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    .sticky-cta {
-      position: fixed;
-      inset: auto 0 0 0;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(8px);
-      border-top: 1px solid rgba(0, 0, 0, 0.08);
-      padding: 12px 16px;
-      z-index: 50;
-      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
-    }
-
-    .sticky-cta .inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    @media (min-width: 720px) {
-      .sticky-cta {
-        display: none;
-      }
-    }
-  </style>
-
-
-  <script>
-    !(function (f, b, e, v, n, t, s) {
-      if (f.fbq) return;
-      n = f.fbq = function () {
-        n.callMethod
-          ? n.callMethod.apply(n, arguments)
-          : n.queue.push(arguments);
-      };
-      if (!f._fbq) f._fbq = n;
-      n.push = n;
-      n.loaded = !0;
-      n.version = '2.0';
-      n.queue = [];
-      t = b.createElement(e);
-      t.async = !0;
-      t.src = v;
-      s = b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t, s);
-    })(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js'
-    );
-    fbq('init', '1493286585428973');
-    fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display: none"
-      src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /></noscript>
-</head>
-
-<body>
+export default function Page() {
+  return (
+    <>
+      <div dangerouslySetInnerHTML={{ __html: `
 
   <header id="site-header"
     style="position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(8px);border-bottom:1px solid #eee;">
@@ -298,7 +34,7 @@
             style="text-decoration:none;color:#333;font-weight:500;">Products</a></li>
         <li><a href="../../.../index.html#contact" style="text-decoration:none;color:#333;font-weight:500;">Contact</a>
         </li>
-        <li><a href="../index.html" class="lang-switch"
+        <li><a href="/zh/campaigns/2025-apec-korea" class="lang-switch"
             style="text-decoration:none;color:#333;padding:4px 10px;border:1px solid #ddd;border-radius:20px;font-size:12px;">ZH</a>
         </li>
       </ul>
@@ -473,6 +209,177 @@
   </script>
 
   <style>
+    :root {
+      --bg: #ffffff;
+      --card: #fdfbf7;
+      --text: #2d3748;
+      --muted: #718096;
+      --brand: #00747a;
+      --brand-2: #009794;
+    }
+
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 120px 24px 40px;
+    }
+
+    header.apec-hero {
+      display: grid;
+      gap: 16px;
+      padding: 24px 0 40px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--brand);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .apec-hero h1 {
+      margin: 0;
+      font-size: clamp(28px, 4.5vw, 44px);
+      line-height: 1.2;
+      color: var(--text);
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: clamp(15px, 2.2vw, 18px);
+    }
+
+    .apec-card {
+      background: var(--card);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      border-radius: 16px;
+      overflow: clip;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .apec-card + .apec-card {
+      margin-top: 28px;
+    }
+
+    .media {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      background: #eee;
+    }
+
+    figure { margin: 0; }
+
+    figcaption {
+      padding: 12px 16px 16px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .apec-content {
+      padding: 22px 20px 24px;
+    }
+
+    .apec-content h2 {
+      margin: 0 0 10px;
+      font-size: clamp(20px, 3vw, 26px);
+      color: var(--text);
+    }
+
+    .apec-content p {
+      margin: 0 0 14px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 0;
+      padding: 12px 18px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #ffffff;
+    }
+
+    .btn-secondary {
+      background: var(--brand-2);
+      color: #ffffff;
+    }
+
+    .btn:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 800px) {
+      .grid-2 { grid-template-columns: 1.15fr 0.85fr; }
+    }
+
+    .feature {
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 28px 1fr;
+      align-items: start;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      background: var(--brand);
+      border-radius: 999px;
+      margin-top: 8px;
+      box-shadow: 0 0 0 6px rgba(0, 116, 122, 0.15);
+    }
+
+    .muted { color: var(--muted); }
+
+    .sticky-cta {
+      position: fixed;
+      inset: auto 0 0 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      padding: 12px 16px;
+      z-index: 50;
+      box-shadow: 0 -4px 10px rgba(0,0,0,0.05);
+    }
+
+    .sticky-cta .inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: 720px) {
+      .sticky-cta { display: none; }
+    }
+
     @media (max-width: 768px) {
       .nav-links {
         display: none !important;
@@ -501,7 +408,7 @@
       document.getElementById("navLinks").classList.toggle("open");
     });
   </script>
-</body>
-
-
-</html>
+` }} />
+    </>
+  );
+}
