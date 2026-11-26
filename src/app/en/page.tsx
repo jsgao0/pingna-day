@@ -68,7 +68,9 @@ export default function Page() {
           <!-- Sparkling Paochong -->
           <div class="sparkling-card reveal reveal-delay-1">
             <div class="sparkling-card-image">
-              <img src="https://www.pingna-day.com/assets/images/sparkling_paochong_tea.png" alt="Sparkling Paochong Tea" />
+              <img class="lightbox-trigger"
+                data-gallery="/assets/images/new-sparkling-teas/sparkling_paochong_chilled.jpg,/assets/images/new-sparkling-teas/sparkling_paochong_front.jpg,/assets/images/new-sparkling-teas/sparkling_paochong_pouring.jpg,/assets/images/new-sparkling-teas/sparkling_paochong_with_glass.jpg,/assets/images/new-sparkling-teas/sparkling_duo_cans.jpg,/assets/images/new-sparkling-teas/sparkling_six_pack_1.jpg,/assets/images/new-sparkling-teas/sparkling_cooler_top.jpg,/assets/images/new-sparkling-teas/sparkling_cooler_side.jpg"
+                src="/assets/images/new-sparkling-teas/sparkling_paochong_chilled.jpg" alt="Sparkling Paochong Tea" />
             </div>
             <div class="sparkling-card-content">
               <h3>Sparkling Paochong Tea</h3>
@@ -85,7 +87,9 @@ export default function Page() {
           <!-- Sparkling Orange -->
           <div class="sparkling-card sparkling-card-orange reveal reveal-delay-2">
             <div class="sparkling-card-image">
-              <img src="https://www.pingna-day.com/assets/images/sparkling_orange_scented_tea.png" alt="Sparkling Orange Scented Tea" />
+              <img class="lightbox-trigger"
+                data-gallery="/assets/images/new-sparkling-teas/sparkling_orange_chilled.jpg,/assets/images/new-sparkling-teas/sparkling_orange_front.jpg,/assets/images/new-sparkling-teas/sparkling_orange_pouring.jpg,/assets/images/new-sparkling-teas/sparkling_orange_back.jpg,/assets/images/new-sparkling-teas/sparkling_duo_cans.jpg,/assets/images/new-sparkling-teas/sparkling_six_pack_2.jpg,/assets/images/new-sparkling-teas/sparkling_cooler_top.jpg,/assets/images/new-sparkling-teas/sparkling_cooler_side.jpg"
+                src="/assets/images/new-sparkling-teas/sparkling_orange_chilled.jpg" alt="Sparkling Orange Scented Tea" />
             </div>
             <div class="sparkling-card-content">
               <h3>Sparkling Orange Scented Tea</h3>

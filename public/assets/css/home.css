@@ -302,8 +302,10 @@
 .sparkling-card-image img {
   max-height: 320px;
   max-width: 100%;
+  border-radius: var(--radius-sm);
   filter: drop-shadow(0 12px 24px rgba(0,0,0,0.12));
   transition: transform var(--transition);
+  cursor: zoom-in;
 }
 
 .sparkling-card:hover .sparkling-card-image img {
